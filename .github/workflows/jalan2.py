@@ -20,7 +20,7 @@ jobs:
       - name: Checkout Private Repository
         uses: actions/checkout@v4
         with:
-          repository: 'USERNAME_GITHUB_ANDA/NAMA_REPO_PRIVATE' # Ganti dengan username & nama repo private Anda
+          repository: 'khofah567765/kalbu.py' # Ganti dengan username & nama repo private Anda
           token: ${{ secrets.GH_PAT }}
           path: 'private_core' # Diunduh ke dalam folder khusus
 
