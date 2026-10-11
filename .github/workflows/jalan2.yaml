@@ -29,14 +29,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests firebase-admin
       # 3. Jalankan vs.py
+        # 3. Langsung jalankan
       - name: Jalankan Scraper & Push ke Firebase
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           FIREBASE_DATABASE_URL: ${{ secrets.FIREBASE_DATABASE_URL }}
-        run: |
-          # Masuk ke folder private_core jika ada
-          if [ -d "private_core" ]; then
-            cd private_core
-          fi
-          python vs.py
+        run: python vs.py
 
