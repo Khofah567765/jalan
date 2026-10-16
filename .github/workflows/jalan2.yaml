@@ -1,9 +1,9 @@
-name: Sync Vision+ Events to Firebase
+name: jalan jalan
 
 on:
   schedule:
     # Otomatis berjalan setiap 1 jam
-    - cron: '10 * * * *'
+    - cron: '5 * * * *'
   workflow_dispatch: # Tombol manual "Run workflow"
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
           python-version: '3.11'
 
       # 1. Download kode dari repo private Khofah567765/bulak
-      - name: Checkout Private Repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           repository: 'Khofah567765/bulak'
@@ -30,7 +30,7 @@ jobs:
           pip install requests firebase-admin
 
       # 3. Jalankan kalbu.py dan push ke Firebase
-      - name: Jalankan Scraper & Push ke Firebase
+      - name: Jalan
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           FIREBASE_DATABASE_URL: ${{ secrets.FIREBASE_DATABASE_URL }}
