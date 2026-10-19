@@ -3,7 +3,7 @@ name: jalan jalan
 on:
   schedule:
     # Otomatis berjalan setiap 1 jam
-    - cron: '5 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch: # Tombol manual "Run workflow"
 
 jobs:
